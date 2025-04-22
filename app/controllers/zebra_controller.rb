@@ -18,13 +18,13 @@ class ZebraController < ActionController::Base
   def paper
     @random_move = ["rock","paper","scissors"].sample
     if @random_move == "rock"
-      @results = "We lost!"
+      @results = "We won!"
     
     elsif @random_move == "paper"
       @results = "We tied!"
 
     else @random_move == "scissors"
-      @results = "We won!"
+      @results = "We lost!"
     end
     
     render({ :template => "game_templates/play_paper" })
@@ -34,10 +34,10 @@ class ZebraController < ActionController::Base
     @random_move = ["rock","paper","scissors"].sample
 
     if @random_move == "rock"
-      @results = "We won!"
+      @results = "We lost!"
     
     elsif @random_move == "paper"
-      @results = "We lost!"
+      @results = "We won!"
 
     else @random_move == "scissors"
       @results = "We tied!"
